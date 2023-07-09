@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="index.css" />
+
+        <title>Frontend Mentor | Space tourism website</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Design System</h1>
+            <section id="colors"></section>
+
+            <div>
+                <nav>
+                    <ul class="flex primary-navigation underline-indicators">
+                        <li class="active">
+                            <a
+                                class="uppercase text-white letter-spacing-2"
+                                href="#"
+                                ><span>01</span>Active</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="uppercase text-white letter-spacing-2"
+                                href="#"
+                                ><span>02</span>Hovered</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="uppercase text-white letter-spacing-2"
+                                href="#"
+                                ><span>03</span>Idle</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+ 
+
+            Explore button
+
+            <div style="margin-top: 4rem">
+                <a
+                    href="/"
+                    class="large-button uppercase ff-serif text-dark bg-white fs-600"
+                >
+                    Explore
+                </a>
+            </div>
+            <div style="height: 30rem"></div>
+        </div>
+
+        <div class="flow" style="margin-bottom: 50dvh; --flow-space: 4rem;">
+
+            <div class="tab-list underline-indicators flex">
+                <button aria-selected="true" class="uppercase text-accent bg-dark ff-sans-cond  letter-spacing-2">Moon</button>
+                <button aria-selected="false" class="uppercase text-accent bg-dark ff-sans-cond  letter-spacing-2">Mars</button>
+                <button aria-selected="false" class="uppercase text-accent bg-dark ff-sans-cond  letter-spacing-2">Europa</button>
+            </div>
+
+            <div class="dot-indicators flex">
+                <button aria-selected="true" > <span class="sr-only">Slide title</span></button>
+                <button aria-selected="false" > <span class="sr-only">Slide title</span></button>
+                <button aria-selected="false" > <span class="sr-only">Slide title</span></button>
+            </div>
+
+            <div class="number-indicators flex">
+                <button aria-selected="true">1</button>
+                <button aria-selected="false">2</button>
+                <button aria-selected="false">3</button>
+            </div>
+
+        </div>
+    </body>
+</html>
