@@ -142,12 +142,12 @@ ol[class] {
 
 .flex {
     display: flex;
-    gap: var(--gap, 1em);
+    gap: var(--gap, 1rem);
 }
 
 .grid {
     display: grid;
-    gap: var(--gap, 1em);
+    gap: var(--gap, 1rem);
 }
 
 .d-block {
@@ -156,7 +156,7 @@ ol[class] {
 
 .flow > * + * {
     margin-top: 1rem;
-    margin-top: var(--flow-space, 1em);
+    margin-top: var(--flow-space, 1rem);
 }
 
 .container {
@@ -168,12 +168,20 @@ ol[class] {
 .grid-container {
     display: grid;
     border: 5px solid green;
+    text-align: center;
+    place-items: center;
+    padding-inline: 1rem;
+}
+
+.grid-container * {
+    max-width: 55ch;
 }
 
 @media (min-width: 45em) {
     .grid-container {
         grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
         column-gap: var(--container-gap, 2rem);
+        text-align: left;
     }
     .grid-container > *:first-child {
         grid-column: 2;
@@ -184,8 +192,12 @@ ol[class] {
         grid-column: 3;
         outline: 1px solid yellow;
     }
-}
 
+    .grid-container--home {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
+    }
+}
 
 .sr-only {
     position: absolute;
@@ -315,6 +327,7 @@ ol[class] {
 
 .large-button {
     padding: 0 2rem;
+    font-size: 2rem;
     place-items: center;
     display: inline-grid;
     z-index: 1;
@@ -424,4 +437,33 @@ a {
 
 .number-indicators > [aria-selected="true"] {
     background-color: hsl(var(--clr-white) / 1);
+}
+
+
+/* --------------------------- */
+/*  Page Specific backgrounds  */
+/* --------------------------- */
+
+body {
+    background-size: cover;
+    background-position: bottom center;
+}
+
+/* Home */
+
+.home {
+    background-image: url(./assets/home/background-home-mobile.jpg);
+}
+
+@media (min-width: 35em) {
+    .home {
+        background-image: url(./assets/home/background-home-tablet.jpg);
+        background-position: center center;
+    }
+}
+
+@media (min-width: 45em) {
+    .home {
+        background-image: url(./assets/home/background-home-desktop.jpg);
+    }
 }
