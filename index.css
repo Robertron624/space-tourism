@@ -136,6 +136,10 @@ select {
     gap: var(--gap, 1rem);
 }
 
+.flex-col {
+    flex-direction: column;
+}
+
 .grid {
     display: grid;
     gap: var(--gap, 1rem);
@@ -493,6 +497,27 @@ body {
     }
 } 
 
+
+/* Technology */
+
+.technology {
+    background-image: url(./assets/technology/background-technology-mobile.jpg);
+}
+
+@media (min-width: 35rem) {
+    .technology {
+        background-position: center center;
+        background-image: url(./assets/technology/background-technology-tablet.jpg);
+    }
+}
+
+@media (min-width: 45rem) {
+    .technology {
+        background-image: url(./assets/technology/background-technology-desktop.jpg);
+    }
+}
+
+
 /* ----------------------------- */
 /* Layout                        */
 /* ----------------------------- */
@@ -516,6 +541,7 @@ body {
 
 /* destination layout */
 
+.grid-container--technology,
 .grid-container--destination {
     --flow-space: 2rem;
     grid-template-areas: 
@@ -532,11 +558,12 @@ body {
 }
 
 
-
+.grid-container--technology > .tab-list,
 .grid-container--destination > .tab-list {
     grid-area: tabs;
 }
 
+.grid-container--technology > .technology-info,
 .grid-container--destination > .destination-info {
     grid-area: content;
 }
@@ -580,6 +607,17 @@ body {
 .crew-details h2 {
     color: hsl( var(--clr-white) / .5);
 }
+
+/* Technology layout */
+
+.grid-container--technology {
+    padding-inline: 0;
+}
+
+.grid-container--technology > picture img{
+    height: 175px;
+}
+
 
 @media (min-width: 35em) {
     .numbered-title {
@@ -663,5 +701,33 @@ body {
         align-self: end;
         max-width: 100%;
     } 
+}
 
+/* Technology tabs */
+
+.technology-tab {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+.technology-tab[aria-selected="true"] {
+    background-color: #fff;
+    color: #0B0D17;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+
+.technology-info h2 .decoration {
+    color: #D0D6F9;
+    font-size: 14px;
+}
+
+.technology-info p {
+    color: #D0D6F9;
+    padding-inline: 1rem;
 }
