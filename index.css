@@ -84,6 +84,8 @@ p {
 
 /* set up the body */
 body {
+    background-size: cover;
+    background-position: bottom center;
     font-family: var(--ff-sans-normal);
     font-size: var(--fs-400);
     color: hsl( var(--clr-white) );
@@ -99,7 +101,7 @@ body {
 
 /* make images easier to work with */
 img,
-picutre {
+picture {
     max-width: 100%;
     display: block;
 }
@@ -229,6 +231,7 @@ select {
 }
 
 .numbered-title {
+    grid-area: title;
     font-family: var(--ff-sans-cond);
     font-size: var(--fs-500);
     text-transform: uppercase;
@@ -439,10 +442,7 @@ select {
 /* ----------------------------- */
 /* Page specific background      */
 /* ----------------------------- */
-body {
-    background-size: cover;
-    background-position: bottom center;
-}
+
 /* home */
 .home {
     background-image: url(./assets/home/background-home-mobile.jpg);
@@ -533,10 +533,6 @@ body {
 
 .grid-container p:not([class]) {
     max-width: 50ch;
-}
-
-.numbered-title {
-    grid-area: title;
 }
 
 /* destination layout */
